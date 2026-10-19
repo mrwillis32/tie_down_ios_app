@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13A739C451E0723555074CBF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D821A968DFBE25DA1A9011 /* RootView.swift */; };
+		19689FC186F22480D18B1647 /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F44EEEE90C8E4FDB891AE /* AppTab.swift */; };
+		1AA57017425704ED58EABC42 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C9E3CE3EB30A0E9DA99D1 /* AppModel.swift */; };
+		2716DF6A0F62F1490B6CA3C6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C909637C90553F66D84D97 /* AuthService.swift */; };
+		379F4266B993DCB8A4CBFABC /* BiometricLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDC98DFD870996C65D694D /* BiometricLock.swift */; };
+		46244AD6B117CC22136A3DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC10D854F3AD4F27A496603 /* Assets.xcassets */; };
+		46D0D218DD321C5C105368BB /* StripeTerminal in Frameworks */ = {isa = PBXBuildFile; productRef = C34A40506D46A95803C3EA10 /* StripeTerminal */; };
+		48B321A49131811FB4E5BD4D /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC504D2AC4D0CA49AB8AD614 /* PushManager.swift */; };
+		51262684E56DA151FEDDF06D /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F22AA314E71EB5D7DDCFA /* WebSession.swift */; };
+		62260C9E9AC4B5C64D7FE436 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95490B7688EC82B20B0C40AE /* LoginView.swift */; };
+		6A78A8EBB899358E8CA0BBE4 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCA78E30C034FD8F4CCD0 /* KeychainStore.swift */; };
+		73BD17D84D548E15099D6FAA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AA61F19CE496C274013B6 /* APIClient.swift */; };
+		8728641DE6F72F5BA8950C88 /* NativeBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DEC1AADA9EF63174598245 /* NativeBridge.swift */; };
+		91C1BC4F6D1CAF41A30010E3 /* TerminalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687956D55E776672CE30C2B /* TerminalManager.swift */; };
+		93A7A8F5EA554A3D1EADB170 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D409975E51B3ABE0CDEE23 /* MainTabView.swift */; };
+		A18501D8DBC9D1A81B1BD888 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717914A8AD6298DA47A47FCC /* AppSettingsView.swift */; };
+		A1F5BEDF9D5B181C1D221A5B /* TieDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42206BECF59C75354EA35C3 /* TieDownApp.swift */; };
+		A41AA8097C9E36FAF83FC371 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2D3E96651A48E757F2E29 /* AppEnvironment.swift */; };
+		A6F21D9B9F1E78871F0BEF9B /* WebScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE42EF79026CFB7F818FB7 /* WebScreen.swift */; };
+		B9C72625CB60DB0C225C9191 /* TapToPayBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E52CBC8A8679D1FC0CF733F /* TapToPayBridge.swift */; };
+		D932CE914502E22E6DC2EEBD /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232F663582A8E1716364D99 /* MoreView.swift */; };
+		E304B36D73BD1DF59556A868 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB79DE121E69B0CF8CAAB7 /* NetworkMonitor.swift */; };
+		FD85EC1818743A1D15DEC824 /* WebScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23102032F4F762C0FA5C37C4 /* WebScreenModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AC10D854F3AD4F27A496603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E52CBC8A8679D1FC0CF733F /* TapToPayBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToPayBridge.swift; sourceTree = "<group>"; };
+		11C909637C90553F66D84D97 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		23102032F4F762C0FA5C37C4 /* WebScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenModel.swift; sourceTree = "<group>"; };
+		27E3A8618770969E264A9DDF /* TieDown.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TieDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3687956D55E776672CE30C2B /* TerminalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalManager.swift; sourceTree = "<group>"; };
+		3BE2D3E96651A48E757F2E29 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		4D0F44EEEE90C8E4FDB891AE /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
+		4D1AA61F19CE496C274013B6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		539F22AA314E71EB5D7DDCFA /* WebSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSession.swift; sourceTree = "<group>"; };
+		549BCA78E30C034FD8F4CCD0 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		567C9E3CE3EB30A0E9DA99D1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		717914A8AD6298DA47A47FCC /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
+		71DDC98DFD870996C65D694D /* BiometricLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLock.swift; sourceTree = "<group>"; };
+		77FB79DE121E69B0CF8CAAB7 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		8232F663582A8E1716364D99 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		95490B7688EC82B20B0C40AE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A1D409975E51B3ABE0CDEE23 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A3CE42EF79026CFB7F818FB7 /* WebScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreen.swift; sourceTree = "<group>"; };
+		B1D821A968DFBE25DA1A9011 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B42206BECF59C75354EA35C3 /* TieDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieDownApp.swift; sourceTree = "<group>"; };
+		B7DEC1AADA9EF63174598245 /* NativeBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeBridge.swift; sourceTree = "<group>"; };
+		CC504D2AC4D0CA49AB8AD614 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73713E0B6F05BF0451FFED50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46D0D218DD321C5C105368BB /* StripeTerminal in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11796357C61F19C011AB7E49 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				CC504D2AC4D0CA49AB8AD614 /* PushManager.swift */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		38118F4BE3CED049EACEB5B7 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				B7DEC1AADA9EF63174598245 /* NativeBridge.swift */,
+				A3CE42EF79026CFB7F818FB7 /* WebScreen.swift */,
+				23102032F4F762C0FA5C37C4 /* WebScreenModel.swift */,
+				539F22AA314E71EB5D7DDCFA /* WebSession.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		5B3A071F70D045481DD0E21D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4D1AA61F19CE496C274013B6 /* APIClient.swift */,
+				77FB79DE121E69B0CF8CAAB7 /* NetworkMonitor.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5BCCA3E846C06DBF9BB141B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				717914A8AD6298DA47A47FCC /* AppSettingsView.swift */,
+				95490B7688EC82B20B0C40AE /* LoginView.swift */,
+				A1D409975E51B3ABE0CDEE23 /* MainTabView.swift */,
+				8232F663582A8E1716364D99 /* MoreView.swift */,
+				B1D821A968DFBE25DA1A9011 /* RootView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C7598581E16F91159C16CE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27E3A8618770969E264A9DDF /* TieDown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93958A3E1821A61996484010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				567C9E3CE3EB30A0E9DA99D1 /* AppModel.swift */,
+				4D0F44EEEE90C8E4FDB891AE /* AppTab.swift */,
+				B42206BECF59C75354EA35C3 /* TieDownApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B939925D730D1D8232594320 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				93958A3E1821A61996484010 /* App */,
+				EF6CB1642FD1B2F8E867E8C0 /* Auth */,
+				CCC69ED28C4BA04E2354210C /* Config */,
+				5B3A071F70D045481DD0E21D /* Networking */,
+				D62974F50161AB880CBD242C /* Payments */,
+				11796357C61F19C011AB7E49 /* Push */,
+				5BCCA3E846C06DBF9BB141B2 /* UI */,
+				38118F4BE3CED049EACEB5B7 /* Web */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CCC69ED28C4BA04E2354210C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2D3E96651A48E757F2E29 /* AppEnvironment.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CD7B5EFF1819D244821B0C57 = {
+			isa = PBXGroup;
+			children = (
+				FE783566FD1E9D2D66DA0492 /* TieDown */,
+				5C7598581E16F91159C16CE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0841342FC304664F05770AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AC10D854F3AD4F27A496603 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D62974F50161AB880CBD242C /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				0E52CBC8A8679D1FC0CF733F /* TapToPayBridge.swift */,
+				3687956D55E776672CE30C2B /* TerminalManager.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		EF6CB1642FD1B2F8E867E8C0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				11C909637C90553F66D84D97 /* AuthService.swift */,
+				71DDC98DFD870996C65D694D /* BiometricLock.swift */,
+				549BCA78E30C034FD8F4CCD0 /* KeychainStore.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FE783566FD1E9D2D66DA0492 /* TieDown */ = {
+			isa = PBXGroup;
+			children = (
+				D0841342FC304664F05770AC /* Resources */,
+				B939925D730D1D8232594320 /* Sources */,
+			);
+			path = TieDown;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7729F28E610D689A3F449523 /* TieDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E35B01034A5E5DA83D228A61 /* Build configuration list for PBXNativeTarget "TieDown" */;
+			buildPhases = (
+				053BBBD1F497B0B987E4EFB7 /* Sources */,
+				C20F3EB84DE17A6EED6EDC85 /* Resources */,
+				73713E0B6F05BF0451FFED50 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TieDown;
+			packageProductDependencies = (
+				C34A40506D46A95803C3EA10 /* StripeTerminal */,
+			);
+			productName = TieDown;
+			productReference = 27E3A8618770969E264A9DDF /* TieDown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CCE9565349CD825499E1770 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7729F28E610D689A3F449523 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4673E5283BE3A8A0C866F72C /* Build configuration list for PBXProject "TieDown" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CD7B5EFF1819D244821B0C57;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1F118F9D225D5235ACFDBF06 /* XCRemoteSwiftPackageReference "stripe-terminal-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5C7598581E16F91159C16CE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7729F28E610D689A3F449523 /* TieDown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C20F3EB84DE17A6EED6EDC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46244AD6B117CC22136A3DBC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		053BBBD1F497B0B987E4EFB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BD17D84D548E15099D6FAA /* APIClient.swift in Sources */,
+				A41AA8097C9E36FAF83FC371 /* AppEnvironment.swift in Sources */,
+				1AA57017425704ED58EABC42 /* AppModel.swift in Sources */,
+				A18501D8DBC9D1A81B1BD888 /* AppSettingsView.swift in Sources */,
+				19689FC186F22480D18B1647 /* AppTab.swift in Sources */,
+				2716DF6A0F62F1490B6CA3C6 /* AuthService.swift in Sources */,
+				379F4266B993DCB8A4CBFABC /* BiometricLock.swift in Sources */,
+				6A78A8EBB899358E8CA0BBE4 /* KeychainStore.swift in Sources */,
+				62260C9E9AC4B5C64D7FE436 /* LoginView.swift in Sources */,
+				93A7A8F5EA554A3D1EADB170 /* MainTabView.swift in Sources */,
+				D932CE914502E22E6DC2EEBD /* MoreView.swift in Sources */,
+				8728641DE6F72F5BA8950C88 /* NativeBridge.swift in Sources */,
+				E304B36D73BD1DF59556A868 /* NetworkMonitor.swift in Sources */,
+				48B321A49131811FB4E5BD4D /* PushManager.swift in Sources */,
+				13A739C451E0723555074CBF /* RootView.swift in Sources */,
+				B9C72625CB60DB0C225C9191 /* TapToPayBridge.swift in Sources */,
+				91C1BC4F6D1CAF41A30010E3 /* TerminalManager.swift in Sources */,
+				A1F5BEDF9D5B181C1D221A5B /* TieDownApp.swift in Sources */,
+				A6F21D9B9F1E78871F0BEF9B /* WebScreen.swift in Sources */,
+				FD85EC1818743A1D15DEC824 /* WebScreenModel.swift in Sources */,
+				51262684E56DA151FEDDF06D /* WebSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		61678B0DAB5DA2D1C8A07A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TieDown/TieDown.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TieDown/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app;
+				PRODUCT_NAME = TieDown;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E66DCD42A9676D48C97251C /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TieDown/TieDown.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TieDown/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app;
+				PRODUCT_NAME = TieDown;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		92673B8DC5A4B62363DFC7AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TD_APS_ENVIRONMENT = production;
+				TD_ENVIRONMENT = production;
+			};
+			name = Release;
+		};
+		B4FB540846F06F0937DCCDF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TieDown/TieDown.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TieDown/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app;
+				PRODUCT_NAME = TieDown;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E89530A8095FEC6158E0AEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TD_APS_ENVIRONMENT = development;
+				TD_ENVIRONMENT = dev;
+			};
+			name = Debug;
+		};
+		EA9CE01D66AFD7FE041512E9 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TD_APS_ENVIRONMENT = production;
+				TD_ENVIRONMENT = staging;
+			};
+			name = Staging;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4673E5283BE3A8A0C866F72C /* Build configuration list for PBXProject "TieDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89530A8095FEC6158E0AEF4 /* Debug */,
+				92673B8DC5A4B62363DFC7AC /* Release */,
+				EA9CE01D66AFD7FE041512E9 /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E35B01034A5E5DA83D228A61 /* Build configuration list for PBXNativeTarget "TieDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FB540846F06F0937DCCDF0 /* Debug */,
+				61678B0DAB5DA2D1C8A07A87 /* Release */,
+				8E66DCD42A9676D48C97251C /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F118F9D225D5235ACFDBF06 /* XCRemoteSwiftPackageReference "stripe-terminal-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-terminal-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C34A40506D46A95803C3EA10 /* StripeTerminal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F118F9D225D5235ACFDBF06 /* XCRemoteSwiftPackageReference "stripe-terminal-ios" */;
+			productName = StripeTerminal;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4CCE9565349CD825499E1770 /* Project object */;
+}
