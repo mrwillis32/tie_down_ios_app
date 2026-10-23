@@ -5,8 +5,8 @@ struct AppSettingsView: View {
     @EnvironmentObject private var lock: BiometricLock
     @EnvironmentObject private var terminal: TerminalManager
     @EnvironmentObject private var auth: AuthService
+    @EnvironmentObject private var printers: PrinterManager
     @StateObject private var push = PushManager.shared
-    @State private var tapToPayError: String?
 
     var body: some View {
         Form {
@@ -40,32 +40,32 @@ struct AppSettingsView: View {
 
             if auth.session?.portal == .staff {
                 Section {
-                    HStack {
-                        Label("Tap to Pay on iPhone", systemImage: "wave.3.right.circle")
-                        Spacer()
-                        if terminal.isConnecting {
-                            ProgressView()
-                        } else {
-                            Text(terminal.connectedReader == nil ? "Not connected" : "Ready")
+                    NavigationLink {
+                        CardReaderSettingsView()
+                    } label: {
+                        HStack {
+                            Label("Card Readers", systemImage: "creditcard.and.123")
+                            Spacer()
+                            Text(terminal.connectedReaderName ?? "Not connected")
                                 .foregroundStyle(terminal.connectedReader == nil ? Color.secondary : Color.green)
+                                .lineLimit(1)
                         }
                     }
-                    if terminal.connectedReader == nil {
-                        Button("Set Up Tap to Pay") {
-                            tapToPayError = nil
-                            Task {
-                                do { try await terminal.prepare() } catch { tapToPayError = error.localizedDescription }
-                            }
+                    NavigationLink {
+                        PrinterSettingsView()
+                    } label: {
+                        HStack {
+                            Label("Printers", systemImage: "printer")
+                            Spacer()
+                            Text(printers.defaultPrinter?.name ?? "None")
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
                         }
-                        .disabled(terminal.isConnecting)
-                    }
-                    if let message = tapToPayError ?? terminal.statusMessage {
-                        Text(message).font(.footnote).foregroundStyle(.secondary)
                     }
                 } header: {
-                    Text("Payments")
+                    Text("Point of Sale")
                 } footer: {
-                    Text("Accept contactless cards and Apple Pay right on this iPhone. Requires iPhone XS or later.")
+                    Text("Tap to Pay, Bluetooth card readers, and AirPrint, network or Bluetooth receipt printers.")
                 }
             }
 

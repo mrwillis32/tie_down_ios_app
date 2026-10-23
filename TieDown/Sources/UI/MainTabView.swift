@@ -25,6 +25,21 @@ struct MainTabView: View {
             }
         }
         .animation(.easeInOut, value: network.isOnline)
+        .sheet(item: $model.nativeSettings) { screen in
+            NavigationStack {
+                Group {
+                    switch screen {
+                    case .cardReaders: CardReaderSettingsView()
+                    case .printers: PrinterSettingsView()
+                    }
+                }
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Done") { model.nativeSettings = nil }
+                    }
+                }
+            }
+        }
     }
 
     /// Tapping the already-selected tab returns that tab to its start page (standard iOS behaviour).

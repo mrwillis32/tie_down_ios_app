@@ -30,6 +30,7 @@ struct TieDownApp: App {
                 .environmentObject(model.lock)
                 .environmentObject(model.network)
                 .environmentObject(model.terminal)
+                .environmentObject(model.printers)
                 .task { await model.start() }
                 .onOpenURL { model.handle(url: $0) }
                 .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in

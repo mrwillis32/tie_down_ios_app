@@ -21,19 +21,27 @@ final class WebScreenModel: NSObject, ObservableObject {
     private(set) var webView: WKWebView!
     private let auth: AuthService
     private let tapToPay: TapToPayBridge
+    private let printBridge: PrintBridge
+    private let printers: PrinterManager
+    /// Hidden windows opened by `window.open("")` for printing, kept alive until printed or closed.
+    private var printWindows: [WKWebView] = []
+    private var printedWindows: Set<ObjectIdentifier> = []
     private var observations: [NSKeyValueObservation] = []
     private var hasLoaded = false
     private var downloadDestinations: [ObjectIdentifier: URL] = [:]
 
-    init(rootPath: String, auth: AuthService, terminal: TerminalManager) {
+    init(rootPath: String, auth: AuthService, terminal: TerminalManager, printers: PrinterManager) {
         self.rootPath = rootPath
         self.auth = auth
+        self.printers = printers
         tapToPay = TapToPayBridge(terminal: terminal)
+        printBridge = PrintBridge(printers: printers)
         super.init()
 
         let native = NativeBridge()
         let config = WebSession.shared.makeConfiguration(messageHandlers: [
             TapToPayBridge.handlerName: tapToPay,
+            PrintBridge.handlerName: printBridge,
             NativeBridge.handlerName: native,
         ])
         let webView = WKWebView(frame: .zero, configuration: config)
@@ -54,6 +62,8 @@ final class WebScreenModel: NSObject, ObservableObject {
 
         self.webView = webView
         tapToPay.webView = webView
+        printBridge.webView = webView
+        printBridge.onPrintRequest = { [weak self] source in self?.markPrinted(source) }
         native.webView = webView
 
         observations = [
@@ -248,11 +258,16 @@ extension WebScreenModel: WKUIDelegate {
     /// `target="_blank"` and `window.open`: same-site links open here, everything else in Safari.
     func webView(
         _ webView: WKWebView,
-        createWebViewWith _: WKWebViewConfiguration,
+        createWebViewWith configuration: WKWebViewConfiguration,
         for action: WKNavigationAction,
         windowFeatures _: WKWindowFeatures
     ) -> WKWebView? {
-        guard let url = action.request.url else { return nil }
+        let url = action.request.url
+        // window.open("") / about:blank: a print window the page will document.write() into.
+        if url == nil || url?.absoluteString.isEmpty == true || url?.scheme == "about" {
+            return makePrintWindow(configuration: configuration)
+        }
+        guard let url else { return nil }
         if AppEnvironment.current.isAppHost(url.host) {
             webView.load(action.request)
         } else if url.scheme == "blob" || url.scheme == "data" {
@@ -261,6 +276,40 @@ extension WebScreenModel: WKUIDelegate {
             openExternally(url)
         }
         return nil
+    }
+
+    /// window.close() from a print window: print it if the page never called print(), then release it.
+    func webViewDidClose(_ webView: WKWebView) {
+        guard let index = printWindows.firstIndex(where: { $0 === webView }) else { return }
+        let window = printWindows.remove(at: index)
+        let id = ObjectIdentifier(window)
+        guard !printedWindows.contains(id) else {
+            printedWindows.remove(id)
+            return
+        }
+        Task { try? await printers.printWebView(window, jobName: window.title ?? "TieDown") }
+    }
+
+    private func makePrintWindow(configuration: WKWebViewConfiguration) -> WKWebView {
+        let window = WKWebView(frame: CGRect(x: 0, y: 0, width: 600, height: 800), configuration: configuration)
+        window.uiDelegate = self
+        window.navigationDelegate = self
+        printWindows.append(window)
+        // The window's own print() must reach the native bridge before the opener calls it.
+        window.evaluateJavaScript(PrintBridge.printOverrideScript)
+        // Don't keep abandoned print windows forever.
+        Task { @MainActor [weak self, weak window] in
+            try? await Task.sleep(nanoseconds: 120_000_000_000)
+            guard let self, let window else { return }
+            self.printWindows.removeAll { $0 === window }
+        }
+        return window
+    }
+
+    /// Marks a print window as printed (called when it sends a print request).
+    func markPrinted(_ webView: WKWebView?) {
+        guard let webView, printWindows.contains(where: { $0 === webView }) else { return }
+        printedWindows.insert(ObjectIdentifier(webView))
     }
 
     func webView(

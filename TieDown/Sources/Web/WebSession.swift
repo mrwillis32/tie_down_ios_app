@@ -47,11 +47,18 @@ final class WebSession {
             source: """
             window.__TIEDOWN_NATIVE__ = true;
             window.__TIEDOWN_PLATFORM__ = 'ios';
-            window.__TIEDOWN_NATIVE_FEATURES__ = { tapToPay: true, push: true, share: true, haptics: true };
+            window.__TIEDOWN_NATIVE_FEATURES__ = { tapToPay: true, bluetoothReaders: true, printing: true, push: true, share: true, haptics: true };
             document.documentElement.classList.add('tiedown-native', 'tiedown-ios');
             """,
             injectionTime: .atDocumentStart,
             forMainFrameOnly: true
+        ))
+        // window.print() does nothing in an iOS web view; route it to the native printer bridge
+        // in every frame (the receipt iframe, print windows, and the page itself).
+        controller.addUserScript(WKUserScript(
+            source: PrintBridge.printOverrideScript,
+            injectionTime: .atDocumentEnd,
+            forMainFrameOnly: false
         ))
         for (name, handler) in messageHandlers {
             // Page content world + weak proxy: only the page's own scripts can call us,

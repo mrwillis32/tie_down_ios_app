@@ -49,10 +49,20 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>TieDown uses Bluetooth to connect to card readers and receipt printers.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_pdl-datastream._tcp</string>
+		<string>_printer._tcp</string>
+		<string>_ipp._tcp</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>TieDown uses the camera to scan product barcodes and capture photos.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>TieDown uses Face ID to unlock the app quickly and securely.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>TieDown connects to receipt printers on your local network.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>TieDown uses your location to verify card payments taken with Tap to Pay on iPhone.</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -69,6 +79,7 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
+		<string>bluetooth-central</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>

@@ -11,6 +11,7 @@ options:
 
 configs:
   Debug: debug
+  Debug Personal: debug
   Staging: release
   Release: release
 
@@ -20,12 +21,19 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
     SWIFT_VERSION: "5.0"
     SWIFT_STRICT_CONCURRENCY: complete
-    DEVELOPMENT_TEAM: ""
+    # Apple Developer Team ID (Xcode › Settings › Accounts). Kept here so `xcodegen generate`
+    # doesn't reset the Team you picked in Signing & Capabilities.
+    DEVELOPMENT_TEAM: 38939VJ4R8
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1,2"
     ENABLE_USER_SCRIPT_SANDBOXING: YES
   configs:
     Debug:
+      TD_ENVIRONMENT: dev
+      TD_APS_ENVIRONMENT: development
+    # Free (Personal Team) Apple accounts can't sign Push Notifications or Tap to Pay.
+    # This config uses entitlements without them so the app still installs on your own device.
+    Debug Personal:
       TD_ENVIRONMENT: dev
       TD_APS_ENVIRONMENT: development
     Staging:
@@ -58,6 +66,9 @@ targets:
         INFOPLIST_FILE: TieDown/Info.plist
         CODE_SIGN_ENTITLEMENTS: TieDown/TieDown.entitlements
         GENERATE_INFOPLIST_FILE: NO
+      configs:
+        Debug Personal:
+          CODE_SIGN_ENTITLEMENTS: TieDown/TieDown-PersonalTeam.entitlements
     info:
       path: TieDown/Info.plist
       properties:
@@ -81,7 +92,8 @@ targets:
           - UIInterfaceOrientationPortraitUpsideDown
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
-        UIBackgroundModes: [remote-notification]
+        # bluetooth-central keeps a connected Bluetooth card reader alive while the app is in the background.
+        UIBackgroundModes: [remote-notification, bluetooth-central]
         CFBundleURLTypes:
           - CFBundleURLName: us.tiedown.app
             CFBundleURLSchemes: [tiedown]
@@ -90,15 +102,30 @@ targets:
         NSCameraUsageDescription: TieDown uses the camera to scan product barcodes and capture photos.
         NSMicrophoneUsageDescription: TieDown uses the microphone for voice commands and dictation.
         NSFaceIDUsageDescription: TieDown uses Face ID to unlock the app quickly and securely.
+        NSBluetoothAlwaysUsageDescription: TieDown uses Bluetooth to connect to card readers and receipt printers.
+        NSLocalNetworkUsageDescription: TieDown connects to receipt printers on your local network.
+        NSBonjourServices: [_pdl-datastream._tcp, _printer._tcp, _ipp._tcp]
         NSPhotoLibraryAddUsageDescription: TieDown saves receipts and documents you download to your photo library when you choose to.
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: false
           NSAllowsLocalNetworking: true
-    entitlements:
-      path: TieDown/TieDown.entitlements
-      properties:
-        com.apple.developer.proximity-reader.payment.acceptance: true
-        aps-environment: $(TD_APS_ENVIRONMENT)
+    # Entitlements are plain files (not generated) so each config can pick its own:
+    #   TieDown/TieDown.entitlements              — Push + Tap to Pay (paid Apple Developer team)
+    #   TieDown/TieDown-PersonalTeam.entitlements — neither (free Personal Team)
+
+  TieDownTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: TieDown/Tests
+    dependencies:
+      - target: TieDown
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: us.tiedown.app.tests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/TieDown.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TieDown
+        BUNDLE_LOADER: $(TEST_HOST)
 
 schemes:
   TieDown:
@@ -107,8 +134,21 @@ schemes:
         TieDown: all
     run:
       config: Debug
+    test:
+      config: Debug
+      targets:
+        - TieDownTests
     archive:
       config: Release
+  # Use this scheme with a free Apple account (no Push Notifications / Tap to Pay).
+  TieDown Personal Team:
+    build:
+      targets:
+        TieDown: all
+    run:
+      config: Debug Personal
+    archive:
+      config: Debug Personal
   TieDown Staging:
     build:
       targets:

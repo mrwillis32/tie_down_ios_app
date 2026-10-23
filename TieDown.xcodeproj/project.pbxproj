@@ -8,45 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		13A739C451E0723555074CBF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D821A968DFBE25DA1A9011 /* RootView.swift */; };
+		188015B2F7F54914C97F1C53 /* ReceiptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD1EA67312B205686B3E1C /* ReceiptTests.swift */; };
 		19689FC186F22480D18B1647 /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F44EEEE90C8E4FDB891AE /* AppTab.swift */; };
 		1AA57017425704ED58EABC42 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C9E3CE3EB30A0E9DA99D1 /* AppModel.swift */; };
+		2230B897BC2A30D47B884DB7 /* EscPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4C8B80C912CFE6D5048A /* EscPos.swift */; };
 		2716DF6A0F62F1490B6CA3C6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C909637C90553F66D84D97 /* AuthService.swift */; };
 		379F4266B993DCB8A4CBFABC /* BiometricLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDC98DFD870996C65D694D /* BiometricLock.swift */; };
+		44B85AD20909478C716DA2D4 /* PrintBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE9515B738D49F059CCEEC /* PrintBridge.swift */; };
 		46244AD6B117CC22136A3DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC10D854F3AD4F27A496603 /* Assets.xcassets */; };
 		46D0D218DD321C5C105368BB /* StripeTerminal in Frameworks */ = {isa = PBXBuildFile; productRef = C34A40506D46A95803C3EA10 /* StripeTerminal */; };
 		48B321A49131811FB4E5BD4D /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC504D2AC4D0CA49AB8AD614 /* PushManager.swift */; };
+		4EF2A0BA0598A5B3680E2229 /* ReceiptFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3E731BBEE6DDE636689BC6 /* ReceiptFormatter.swift */; };
 		51262684E56DA151FEDDF06D /* WebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F22AA314E71EB5D7DDCFA /* WebSession.swift */; };
+		621B8DCD51732FA83D050C78 /* PrinterStoreAndTransportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F81E3AAE6E9BC99FAD7227 /* PrinterStoreAndTransportTests.swift */; };
 		62260C9E9AC4B5C64D7FE436 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95490B7688EC82B20B0C40AE /* LoginView.swift */; };
 		6A78A8EBB899358E8CA0BBE4 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCA78E30C034FD8F4CCD0 /* KeychainStore.swift */; };
 		73BD17D84D548E15099D6FAA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AA61F19CE496C274013B6 /* APIClient.swift */; };
+		757C44D31309D14A19D77B18 /* CardReaderSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150C5B0B6FFC330B901851DF /* CardReaderSettingsView.swift */; };
+		80112E050BE1C04DAF64358F /* EscPosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A2F650C57A1A70C7F68CD /* EscPosTests.swift */; };
 		8728641DE6F72F5BA8950C88 /* NativeBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DEC1AADA9EF63174598245 /* NativeBridge.swift */; };
+		8B7DBBF1D3118EB625B50DAF /* ReceiptPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9E3A3F04704B6B1984C34 /* ReceiptPayload.swift */; };
 		91C1BC4F6D1CAF41A30010E3 /* TerminalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687956D55E776672CE30C2B /* TerminalManager.swift */; };
 		93A7A8F5EA554A3D1EADB170 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D409975E51B3ABE0CDEE23 /* MainTabView.swift */; };
+		94E0F9E58B207A07D858F1D4 /* SavedPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618BB0D946D7C57BEBB950A4 /* SavedPrinter.swift */; };
+		9A76BB1398508385007AFCCE /* PrinterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137272834C4E00ADDAFBC096 /* PrinterSettingsView.swift */; };
 		A18501D8DBC9D1A81B1BD888 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717914A8AD6298DA47A47FCC /* AppSettingsView.swift */; };
 		A1F5BEDF9D5B181C1D221A5B /* TieDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42206BECF59C75354EA35C3 /* TieDownApp.swift */; };
 		A41AA8097C9E36FAF83FC371 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2D3E96651A48E757F2E29 /* AppEnvironment.swift */; };
 		A6F21D9B9F1E78871F0BEF9B /* WebScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE42EF79026CFB7F818FB7 /* WebScreen.swift */; };
 		B9C72625CB60DB0C225C9191 /* TapToPayBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E52CBC8A8679D1FC0CF733F /* TapToPayBridge.swift */; };
+		BA533BCE2FC88AA03BFF6487 /* PrinterTransports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB283016DF19F471A1D40F /* PrinterTransports.swift */; };
 		D932CE914502E22E6DC2EEBD /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232F663582A8E1716364D99 /* MoreView.swift */; };
 		E304B36D73BD1DF59556A868 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB79DE121E69B0CF8CAAB7 /* NetworkMonitor.swift */; };
+		FA7CE948430ABB2317730892 /* PrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CEA4024BAE2222D74E143 /* PrinterManager.swift */; };
 		FD85EC1818743A1D15DEC824 /* WebScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23102032F4F762C0FA5C37C4 /* WebScreenModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		83D5A108032700A79904A77A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CCE9565349CD825499E1770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7729F28E610D689A3F449523;
+			remoteInfo = TieDown;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0A2CEA4024BAE2222D74E143 /* PrinterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterManager.swift; sourceTree = "<group>"; };
 		0AC10D854F3AD4F27A496603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E52CBC8A8679D1FC0CF733F /* TapToPayBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToPayBridge.swift; sourceTree = "<group>"; };
 		11C909637C90553F66D84D97 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		137272834C4E00ADDAFBC096 /* PrinterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterSettingsView.swift; sourceTree = "<group>"; };
+		150C5B0B6FFC330B901851DF /* CardReaderSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReaderSettingsView.swift; sourceTree = "<group>"; };
 		23102032F4F762C0FA5C37C4 /* WebScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenModel.swift; sourceTree = "<group>"; };
 		27E3A8618770969E264A9DDF /* TieDown.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TieDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3687956D55E776672CE30C2B /* TerminalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalManager.swift; sourceTree = "<group>"; };
 		3BE2D3E96651A48E757F2E29 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		44CD1EA67312B205686B3E1C /* ReceiptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTests.swift; sourceTree = "<group>"; };
 		4D0F44EEEE90C8E4FDB891AE /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
 		4D1AA61F19CE496C274013B6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		4F2F4C8B80C912CFE6D5048A /* EscPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscPos.swift; sourceTree = "<group>"; };
 		539F22AA314E71EB5D7DDCFA /* WebSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSession.swift; sourceTree = "<group>"; };
+		53FB283016DF19F471A1D40F /* PrinterTransports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterTransports.swift; sourceTree = "<group>"; };
 		549BCA78E30C034FD8F4CCD0 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		567C9E3CE3EB30A0E9DA99D1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		618BB0D946D7C57BEBB950A4 /* SavedPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPrinter.swift; sourceTree = "<group>"; };
+		70F81E3AAE6E9BC99FAD7227 /* PrinterStoreAndTransportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterStoreAndTransportTests.swift; sourceTree = "<group>"; };
+		70F9E3A3F04704B6B1984C34 /* ReceiptPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptPayload.swift; sourceTree = "<group>"; };
 		717914A8AD6298DA47A47FCC /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		71DDC98DFD870996C65D694D /* BiometricLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLock.swift; sourceTree = "<group>"; };
+		777A2F650C57A1A70C7F68CD /* EscPosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscPosTests.swift; sourceTree = "<group>"; };
 		77FB79DE121E69B0CF8CAAB7 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		8232F663582A8E1716364D99 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		95490B7688EC82B20B0C40AE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -55,7 +87,10 @@
 		B1D821A968DFBE25DA1A9011 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B42206BECF59C75354EA35C3 /* TieDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieDownApp.swift; sourceTree = "<group>"; };
 		B7DEC1AADA9EF63174598245 /* NativeBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeBridge.swift; sourceTree = "<group>"; };
+		C3BE9515B738D49F059CCEEC /* PrintBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintBridge.swift; sourceTree = "<group>"; };
 		CC504D2AC4D0CA49AB8AD614 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+		F5291E0BB0B8B643F38EC3C1 /* TieDownTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TieDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3E731BBEE6DDE636689BC6 /* ReceiptFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				717914A8AD6298DA47A47FCC /* AppSettingsView.swift */,
+				150C5B0B6FFC330B901851DF /* CardReaderSettingsView.swift */,
 				95490B7688EC82B20B0C40AE /* LoginView.swift */,
 				A1D409975E51B3ABE0CDEE23 /* MainTabView.swift */,
 				8232F663582A8E1716364D99 /* MoreView.swift */,
+				137272834C4E00ADDAFBC096 /* PrinterSettingsView.swift */,
 				B1D821A968DFBE25DA1A9011 /* RootView.swift */,
 			);
 			path = UI;
@@ -114,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				27E3A8618770969E264A9DDF /* TieDown.app */,
+				F5291E0BB0B8B643F38EC3C1 /* TieDownTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +166,16 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		A5FE9AE594D523E457029C83 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				777A2F650C57A1A70C7F68CD /* EscPosTests.swift */,
+				70F81E3AAE6E9BC99FAD7227 /* PrinterStoreAndTransportTests.swift */,
+				44CD1EA67312B205686B3E1C /* ReceiptTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		B939925D730D1D8232594320 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +184,7 @@
 				CCC69ED28C4BA04E2354210C /* Config */,
 				5B3A071F70D045481DD0E21D /* Networking */,
 				D62974F50161AB880CBD242C /* Payments */,
+				DA523457A4983BA617962865 /* Printing */,
 				11796357C61F19C011AB7E49 /* Push */,
 				5BCCA3E846C06DBF9BB141B2 /* UI */,
 				38118F4BE3CED049EACEB5B7 /* Web */,
@@ -176,6 +225,20 @@
 			path = Payments;
 			sourceTree = "<group>";
 		};
+		DA523457A4983BA617962865 /* Printing */ = {
+			isa = PBXGroup;
+			children = (
+				4F2F4C8B80C912CFE6D5048A /* EscPos.swift */,
+				C3BE9515B738D49F059CCEEC /* PrintBridge.swift */,
+				0A2CEA4024BAE2222D74E143 /* PrinterManager.swift */,
+				53FB283016DF19F471A1D40F /* PrinterTransports.swift */,
+				FE3E731BBEE6DDE636689BC6 /* ReceiptFormatter.swift */,
+				70F9E3A3F04704B6B1984C34 /* ReceiptPayload.swift */,
+				618BB0D946D7C57BEBB950A4 /* SavedPrinter.swift */,
+			);
+			path = Printing;
+			sourceTree = "<group>";
+		};
 		EF6CB1642FD1B2F8E867E8C0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +254,7 @@
 			children = (
 				D0841342FC304664F05770AC /* Resources */,
 				B939925D730D1D8232594320 /* Sources */,
+				A5FE9AE594D523E457029C83 /* Tests */,
 			);
 			path = TieDown;
 			sourceTree = "<group>";
@@ -218,6 +282,24 @@
 			productReference = 27E3A8618770969E264A9DDF /* TieDown.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E6F5DA25372C5DFEF410376C /* TieDownTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A9A393B2E7ED1595489187 /* Build configuration list for PBXNativeTarget "TieDownTests" */;
+			buildPhases = (
+				A4BF95B859CEB22A855E91F7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA65531690A6D2123EF41919 /* PBXTargetDependency */,
+			);
+			name = TieDownTests;
+			packageProductDependencies = (
+			);
+			productName = TieDownTests;
+			productReference = F5291E0BB0B8B643F38EC3C1 /* TieDownTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,7 +310,11 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					7729F28E610D689A3F449523 = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = 38939VJ4R8;
+						ProvisioningStyle = Automatic;
+					};
+					E6F5DA25372C5DFEF410376C = {
+						DevelopmentTeam = 38939VJ4R8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -251,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				7729F28E610D689A3F449523 /* TieDown */,
+				E6F5DA25372C5DFEF410376C /* TieDownTests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,14 +365,23 @@
 				19689FC186F22480D18B1647 /* AppTab.swift in Sources */,
 				2716DF6A0F62F1490B6CA3C6 /* AuthService.swift in Sources */,
 				379F4266B993DCB8A4CBFABC /* BiometricLock.swift in Sources */,
+				757C44D31309D14A19D77B18 /* CardReaderSettingsView.swift in Sources */,
+				2230B897BC2A30D47B884DB7 /* EscPos.swift in Sources */,
 				6A78A8EBB899358E8CA0BBE4 /* KeychainStore.swift in Sources */,
 				62260C9E9AC4B5C64D7FE436 /* LoginView.swift in Sources */,
 				93A7A8F5EA554A3D1EADB170 /* MainTabView.swift in Sources */,
 				D932CE914502E22E6DC2EEBD /* MoreView.swift in Sources */,
 				8728641DE6F72F5BA8950C88 /* NativeBridge.swift in Sources */,
 				E304B36D73BD1DF59556A868 /* NetworkMonitor.swift in Sources */,
+				44B85AD20909478C716DA2D4 /* PrintBridge.swift in Sources */,
+				FA7CE948430ABB2317730892 /* PrinterManager.swift in Sources */,
+				9A76BB1398508385007AFCCE /* PrinterSettingsView.swift in Sources */,
+				BA533BCE2FC88AA03BFF6487 /* PrinterTransports.swift in Sources */,
 				48B321A49131811FB4E5BD4D /* PushManager.swift in Sources */,
+				4EF2A0BA0598A5B3680E2229 /* ReceiptFormatter.swift in Sources */,
+				8B7DBBF1D3118EB625B50DAF /* ReceiptPayload.swift in Sources */,
 				13A739C451E0723555074CBF /* RootView.swift in Sources */,
+				94E0F9E58B207A07D858F1D4 /* SavedPrinter.swift in Sources */,
 				B9C72625CB60DB0C225C9191 /* TapToPayBridge.swift in Sources */,
 				91C1BC4F6D1CAF41A30010E3 /* TerminalManager.swift in Sources */,
 				A1F5BEDF9D5B181C1D221A5B /* TieDownApp.swift in Sources */,
@@ -295,9 +391,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4BF95B859CEB22A855E91F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80112E050BE1C04DAF64358F /* EscPosTests.swift in Sources */,
+				621B8DCD51732FA83D050C78 /* PrinterStoreAndTransportTests.swift in Sources */,
+				188015B2F7F54914C97F1C53 /* ReceiptTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CA65531690A6D2123EF41919 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7729F28E610D689A3F449523 /* TieDown */;
+			targetProxy = 83D5A108032700A79904A77A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		612BCA229E78887A5FDD71D4 /* Debug Personal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TieDown.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TieDown";
+			};
+			name = "Debug Personal";
+		};
 		61678B0DAB5DA2D1C8A07A87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -315,6 +446,40 @@
 				PRODUCT_NAME = TieDown;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6D715C2F6329CC887387C37A /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TieDown.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TieDown";
+			};
+			name = Staging;
+		};
+		854C1BE957950453474F12CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TieDown.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TieDown";
 			};
 			name = Release;
 		};
@@ -375,7 +540,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38939VJ4R8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -403,6 +568,26 @@
 			};
 			name = Release;
 		};
+		9E74F77E65396569F39A2712 /* Debug Personal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TieDown/TieDown-PersonalTeam.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TieDown/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app;
+				PRODUCT_NAME = TieDown;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Personal";
+		};
 		B4FB540846F06F0937DCCDF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,6 +605,95 @@
 				PRODUCT_NAME = TieDown;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5DAC0750414766012D227ED /* Debug Personal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 38939VJ4R8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TD_APS_ENVIRONMENT = development;
+				TD_ENVIRONMENT = dev;
+			};
+			name = "Debug Personal";
+		};
+		C163E77AF6E892704F30264A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.tiedown.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TieDown.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TieDown";
 			};
 			name = Debug;
 		};
@@ -460,7 +734,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38939VJ4R8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -532,7 +806,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38939VJ4R8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -563,10 +837,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		42A9A393B2E7ED1595489187 /* Build configuration list for PBXNativeTarget "TieDownTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C163E77AF6E892704F30264A /* Debug */,
+				612BCA229E78887A5FDD71D4 /* Debug Personal */,
+				854C1BE957950453474F12CB /* Release */,
+				6D715C2F6329CC887387C37A /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		4673E5283BE3A8A0C866F72C /* Build configuration list for PBXProject "TieDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E89530A8095FEC6158E0AEF4 /* Debug */,
+				B5DAC0750414766012D227ED /* Debug Personal */,
 				92673B8DC5A4B62363DFC7AC /* Release */,
 				EA9CE01D66AFD7FE041512E9 /* Staging */,
 			);
@@ -577,6 +863,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4FB540846F06F0937DCCDF0 /* Debug */,
+				9E74F77E65396569F39A2712 /* Debug Personal */,
 				61678B0DAB5DA2D1C8A07A87 /* Release */,
 				8E66DCD42A9676D48C97251C /* Staging */,
 			);

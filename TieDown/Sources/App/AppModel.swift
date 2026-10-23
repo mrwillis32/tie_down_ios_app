@@ -7,6 +7,7 @@ import SwiftUI
 final class AppModel: ObservableObject {
     let auth = AuthService()
     let terminal = TerminalManager()
+    let printers = PrinterManager()
     let lock = BiometricLock()
     let network = NetworkMonitor()
     let push = PushManager.shared
@@ -15,6 +16,8 @@ final class AppModel: ObservableObject {
     @Published private(set) var tabs: [AppTab] = []
     @Published private(set) var moreItems: [AppTab] = []
     @Published var showFaceIDOffer = false
+    /// A native settings screen a web page asked to open (card readers / printers).
+    @Published var nativeSettings: NativeSettingsScreen?
 
     private var screens: [String: WebScreenModel] = [:]
     private var cancellables: Set<AnyCancellable> = []
@@ -40,6 +43,12 @@ final class AppModel: ObservableObject {
             .store(in: &cancellables)
 
         // Forward nested service changes so SwiftUI views observing AppModel refresh.
+        NotificationCenter.default.publisher(for: .tdOpenNativeSettings)
+            .compactMap { $0.object as? NativeSettingsScreen }
+            .receive(on: RunLoop.main)
+            .sink { [weak self] screen in self?.nativeSettings = screen }
+            .store(in: &cancellables)
+
         for publisher in [auth.objectWillChange, lock.objectWillChange, network.objectWillChange, terminal.objectWillChange] {
             publisher.sink { [weak self] _ in self?.objectWillChange.send() }.store(in: &cancellables)
         }
@@ -54,7 +63,7 @@ final class AppModel: ObservableObject {
 
     func screen(for tab: AppTab) -> WebScreenModel {
         if let existing = screens[tab.id] { return existing }
-        let model = WebScreenModel(rootPath: tab.path, auth: auth, terminal: terminal)
+        let model = WebScreenModel(rootPath: tab.path, auth: auth, terminal: terminal, printers: printers)
         screens[tab.id] = model
         return model
     }
@@ -128,6 +137,10 @@ final class AppModel: ObservableObject {
     private func onFirstSignIn() {
         Task {
             await push.requestAndRegister()
+            // Staff devices: bring back the Bluetooth card reader used last time.
+            if auth.session?.portal == .staff, terminal.preferredKind == .bluetooth {
+                await terminal.reconnectSavedReader()
+            }
             if lock.isAvailable, !lock.isEnabled,
                !UserDefaults.standard.bool(forKey: "faceIDOfferShown")
             {
